@@ -1,13 +1,17 @@
 <template>
   <div class="landing-page">
     <div class="login-wrapper">
-      <input-component></input-component>
+      <div class="logo-box">
+        <img src="../assets/logo.jpg" alt>
+      </div>
+      <input-component label="邮箱"></input-component>
+      <input-component label="密码"></input-component>
     </div>
     <div class="news-wrapper">新闻信息页</div>
   </div>
 </template>
 <script>
-import InputComponent from "@/components/input/input"
+import InputComponent from "@/components/input/input";
 
 export default {
   data() {
@@ -29,14 +33,24 @@ export default {
   overflow: hidden;
   .login-wrapper {
     width: 30%;
+    min-width: 300px;
     height: 100%;
     background: red;
     float: left;
+    text-align: center;
+    .logo-box {
+      width: 100%;
+      img{
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+      }
+    }
   }
-  .news-wrapper{
+  .news-wrapper {
     width: 70%;
     height: 100%;
-    background: blue;
+    // background: blue;
     float: right;
   }
 }
